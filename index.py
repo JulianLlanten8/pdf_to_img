@@ -3,7 +3,6 @@ from tkinter import Listbox, Button, Entry , messagebox, filedialog
 from pdf2image import convert_from_path
 import os
 
-
 archivo = ""
 # Lista de opciones
 opciones_formato = ['jpg', 'jpeg', 'png', 'tiff']
@@ -21,9 +20,6 @@ def seleccionar():
             # Convertir el PDF a imágenes
             images = convert_from_path(pdf_path)
 
-                # Pregunta al usuario que seleccione un formato de imagen
-
-            
             # Guardar cada imagen en archivos separados
             for i, image in enumerate(images):
                 image.save(f'{entry_texto.get()}{i + 1}.jpg', 'JPEG')
