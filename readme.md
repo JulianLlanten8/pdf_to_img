@@ -9,6 +9,7 @@ Instala pdf2image con PIP
 ```bash
   cd PDF_TO_IMG
   pip install pdf2image
+  python index.py
 ```
 
 
