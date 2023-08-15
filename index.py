@@ -22,6 +22,8 @@ def seleccionar():
             print(f'Archivo encontrado "{pdf_path}"')
             # Convertir el PDF a imágenes
             images = convert_from_path(pdf_path)
+            # directorio de descargas del usuario
+            download_directory = os.path.expanduser("~/Downloads")
 
             # Guardar cada imagen en archivos separados
             for i, image in enumerate(images):
@@ -29,11 +31,12 @@ def seleccionar():
                 img_miniatura = ImageTk.PhotoImage(image.resize((100, 100)))
                 label_miniatura.config(image=img_miniatura)
                 label_miniatura.image = img_miniatura
-                image.save(f'{entry_texto.get()}{i + 1}.jpg', 'JPEG')
+                image.save(
+                    f"{download_directory}/{entry_texto.get()}{i}.{opcion_seleccionada}")
 
             if len(images) > 0:
                 print(
-                    f"Se convirtieron {len(images)} páginas del PDF a imágenes.")
+                    f"Se convirtieron {len(images)} páginas del PDF a imágenes. \n Se guardaron en {download_directory}")
                 messagebox.showinfo(
                     "¡Éxito!", f"Se convirtieron {len(images)} páginas del PDF a imágenes.")
             else:
@@ -53,7 +56,13 @@ def ingresar_texto():
 
 def abrir_selector_archivos():
     global archivo
-    archivo = filedialog.askopenfilename()
+    # que los archivos que se puedan seleccionar sean solo pdf
+    archivo = filedialog.askopenfilename(filetypes=(
+        ("pdf files", "*.pdf"), ("all files", "*.*")))
+    # cambiar el color del boton al seleccionar un archivo y cambiar el texto por la ruta del archivo
+    if archivo:
+        nombre = archivo.split("/")
+        boton_selector.config(bg="#41b883", fg="white", text=nombre[-1])
 
 
 # Crear una ventana
