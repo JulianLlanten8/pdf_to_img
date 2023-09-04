@@ -1,6 +1,8 @@
-![Vista previa](preview.gif)
+<img src="./preview.gif" width="40%"/>
 
 # Programa para convertir pdf 📃 a imagenes 🎞 facil, rapido, intuitivo 🥰😏🎉!!
+
+| pdf_to_img convierte un archivo pdf a imagenes y se descargaran 1 por cada hoja del documento, si te gusto deja tu estrella.
 
 ## Installation
 
