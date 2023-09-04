@@ -1,6 +1,6 @@
-# Programa para convertir pdf 📃 a imagenes 🎞 facil, rapido, intuitivo y lo mejor gratis 🥰😏🎉!!
+![Vista previa](![Alt text](preview.gif))
 
-![Vista previa](preview.png)
+# Programa para convertir pdf 📃 a imagenes 🎞 facil, rapido, intuitivo y lo mejor gratis 🥰😏🎉!!
 
 ## Installation
 
@@ -9,12 +9,11 @@ Instala pdf2image con PIP
 ```bash
   cd PDF_TO_IMG
   pip install pdf2image
-  python index.py
+  python main.py
 ```
 
-
-
 ## Requerimientos del aplicativo
+
 **Lenguaje:** Python intaldo en el sistema
 
 **Descargar Poppler:** https://github.com/oschwartz10612/poppler-windows/releases
