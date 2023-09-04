@@ -1,4 +1,4 @@
-<img src="./preview.gif" width="40%"/>
+<img src="./preview.gif" width="45%"/>
 
 # Programa para convertir pdf 📃 a imagenes 🎞 facil, rapido, intuitivo 🥰😏🎉!!
 
@@ -9,7 +9,7 @@
 Instala pdf2image con PIP
 
 ```bash
-  cd PDF_TO_IMG
+  pip install flet
   pip install pdf2image
   python main.py
 ```
